@@ -11,6 +11,10 @@ This repository contains practical implementations and examples as I work throug
 - [**Classes & Objects**](./Classes&Objects/) - Basic Java code structure
 - [**String, Wrapper Classes, Arrays & Enums**](./StringWrapperArrayEnums/) - Use of String and String Builder, Wrapper Classes, Arrays and Enums
 
+## 🧠 Practise
+
+- [**CreditCard**](./CreditCard/) - A Credit Card Model Class
+- [**ChapOneExercises**](./ChapOneExercises/) - Chapter 1 Exercises Programs
 
 ## 🚀 Getting Started
 
