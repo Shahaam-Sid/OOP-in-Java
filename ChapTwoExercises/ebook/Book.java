@@ -117,12 +117,12 @@ public class Book {
             throw new IllegalArgumentException(fieldName + " must be atleast 1");
         }
     }
-    private static void checkStringLength(String n) {
+    protected static void checkStringLength(String n) {
         if (n.length() < 3 || n.length() > 25) {
             throw new IllegalArgumentException(n + " is not between 3-25 characters");
         }
     }
-    private static void checkStringIsAlpha(String n) {
+    protected static void checkStringIsAlpha(String n) {
         if (!(n.matches("[a-zA-Z ]+"))) {
             throw new IllegalArgumentException("Author Name must only contain Alphabets and Spaces");
         }

@@ -16,6 +16,7 @@ This repository contains practical implementations and examples as I work throug
 - [**CreditCard**](./CreditCard/) - A Credit Card Model Class
 - [**ChapOneExercises**](./ChapOneExercises/) - Chapter 1 Exercises Programs
 - [**Progression**](./Progression/) - Progressions using Inheritence
+- [**ChapTwoExercises**](./ChapTwoExercises/) - Chapter 2 Exercises Programs
 
 ## 🚀 Getting Started
 

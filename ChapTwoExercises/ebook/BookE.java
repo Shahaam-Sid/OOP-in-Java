@@ -1,5 +1,5 @@
 public class BookE extends Book {
-    protected  static int indexEB = 0;
+    protected static int indexEB = 0;
     protected String format;
     protected double size;
 
@@ -59,16 +59,14 @@ public class BookE extends Book {
 
     @Override
     public String toString() {
-        return "Book: " + bookName + "    Author: " + authorName + "\n" + 
-        "Genre: " + gen + "    Year Released: " + releaseYear + "\n" +  
-        "Pages: " + pages + "    Edition: " + edition + "    Parts: " + parts + "\n" + 
+        return super.toString() + "\n" + 
         "Format: " + format + "    Size: " + size + "mb";
     }
     public static String allowedFormats() {
         return "Allowed Formats: {PDF, EPUB, AZW, OTHER}";
     }
 
-    
+
     private static void checkFormatType(String formatType) {
         formatType = formatType.toUpperCase();
         if (!(formatType.equals("PDF") || formatType.equals("EPUB") ||
