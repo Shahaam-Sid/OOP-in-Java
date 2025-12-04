@@ -1,19 +1,16 @@
-public class PG{
+public abstract class PG{
     
     protected long current;
 
     public PG() {this(0);}
-    public PG(int start) {
-        current = start;
-    }
+    public PG(int start) {current = start;}
     public long nextValue() {
         long ans = current;
         advance();
         return ans;
     }
-    protected void advance() {
-        current++;
-    }
+    protected abstract void advance();
+
     public void printProgression(int n) {
         StringBuilder sb = new StringBuilder();
 
