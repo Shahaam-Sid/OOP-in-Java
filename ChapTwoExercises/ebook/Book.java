@@ -9,6 +9,10 @@ public class Book {
     protected int parts;
     protected String gen;
 
+    public Book(Book book) {
+        this(book.bookName, book.releaseYear, book.authorName, book.pages, book.gen,
+            book.isOriginal, book.edition, book.parts);
+    }
     public Book(String nameOfBook, String nameOfAuthor) {
         this(nameOfBook, 2000, nameOfAuthor,
             1, "",false, 1,

@@ -1,19 +1,28 @@
 public class Main {
     public static void main(String[] args) {
-        Book b1 = new Book("The Anarchy", 2019,
-        "William Dalrymple", 522,
-        "History", true,
-        1, 1);
+        
+        AudioBook audio1 = new AudioBook("Quicksilver", 2024,
+        "Callie Hart", 624, "Romance", true,
+        1, 1, 74460, "Stella Brown");
+        
+        BookE electronic1 = new BookE("The Anarchy", 2019,
+        "William Dalrymple", 522, "History", true,
+        1, 1, "pdf", 5.4);
 
-        BookE eb1 = new BookE(b1, "PDF", 2.5);
+        Book book = new Book("Saif ul Maslool", 1898,
+        "Sanaullah Panipatti", 538, "Islamic",
+        true, 1, 1);
 
-        AudioBook ab1 = new AudioBook(eb1, 56580, "William Dalrymple");
+        Book[] arrBook = {audio1, book, electronic1};
 
-        System.out.println(eb1.toString());
-        System.out.println(ab1.toString());
+        BookInventory invOne = new BookInventory(arrBook);
 
-        System.out.println(Book.getIndex());
-        System.out.println(BookE.getIndex());
-        System.out.println(AudioBook.getIndex());
+        BookE electronic2 = new BookE("Tale of Two Cities", 1859,
+        "Charles Dickens", 392, "Historical Fiction",
+        true, 1, 1, "azw", 55740);
+
+        invOne.addBook(electronic2);
+        System.out.println(invOne.summary());
+
     }
 }

@@ -28,7 +28,7 @@ public class BookE extends Book {
 
             checkSize(sizeOccupies);
             
-            format = formatType;
+            format = formatType.toUpperCase();
             size = sizeOccupies;
 
             indexEB++;
