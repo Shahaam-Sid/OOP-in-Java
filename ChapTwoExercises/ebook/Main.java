@@ -21,7 +21,9 @@ public class Main {
         "Charles Dickens", 392, "Historical Fiction",
         true, 1, 1, "azw", 55740);
 
-        invOne.addBook(electronic2);
+        invOne.removeBook(0);
+        invOne.removeBook(electronic1);
+        invOne.removeAll();
         System.out.println(invOne.summary());
 
     }

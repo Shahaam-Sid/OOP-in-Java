@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 public class BookInventory {
-    ArrayList<Book> inventory;
+    private ArrayList<Book> inventory;
 
     public BookInventory(ArrayList<Book> arrList, String typeCopy) {
         typeCopy = typeCopy.toLowerCase();
@@ -41,21 +41,27 @@ public class BookInventory {
         return inventory.size();
     }
     public int getIndex(Book book) {
+        checkElementExists(book);
         int i = inventory.indexOf(book);
-
-        if (i == -1) {
-            throw new NoSuchElementException("Book not in Inventory");
-        }
         return i;
     }
     public void addBook(Book book) {
         inventory.add(book);
     }
     public void addBook(Book book, int index) {
-        if (index < 0 || index > inventory.size()) {
-            throw new IndexOutOfBoundsException("Index must be between 0-" + inventory.size());
-        }
+        checkIndex(index);
         inventory.add(index, book);
+    }
+    public void removeBook(Book book) {
+        checkElementExists(book);
+        inventory.remove(book);
+    }
+    public void removeBook(int index) {
+        checkIndex(index);
+        inventory.remove(index);
+    }
+    public void removeAll() {
+        inventory.clear();
     }
     public String summary() {
         StringBuilder sb = new StringBuilder();
@@ -82,5 +88,17 @@ public class BookInventory {
         }
 
         return sb.toString();
+    }
+
+
+    private void checkIndex(int i) {
+        if (i < 0 || i > inventory.size()) {
+            throw new IndexOutOfBoundsException("Index must be between 0-" + inventory.size());
+        }
+    }
+    private void checkElementExists(Book book) {
+        if (!(inventory.contains(book))) {
+            throw new NoSuchElementException(book.bookName + " not in inventory");
+        }
     }
 }
